@@ -9,7 +9,7 @@ dscl_path='/Volumes/macOS/private/var/db/dslocal/nodes/Default'
 
 echo -e "Enter Real name (Default: Mani)"
 read realName 
-realName="$ {realName:=Mani}"
+realName="${realName:=Mani}"
 echo -e "Enter User name (Default: Mani)"
 read username 
 username="${username:=Mani}" 
