@@ -6,7 +6,7 @@ echo -e "Author ManiX"
 echo ""
 dscl_path='/Volumes/macOS/private/var/db/dslocal/nodes/Default'
 # Create user
-
+#----------------
 echo -e "Enter Real name (Default: Mani)"
 read realName 
 realName="${realName:=Mani}"
@@ -26,11 +26,11 @@ mkdir "/Volumes/macOS/Users/$username"
 dscl -f "$dscl_path" localhost -create "/Local/Default/Users/$username" NFSHomeDirectory "/Users/$username"
 dscl -f "$dscl_path" localhost -passwd "/Local/Default/Users/$username" "$passw"
 dscl -f "$dscl_path" localhost -append "/Local/Default/Groups/admin" GroupMembership $username
-
+#----------------------
 touch /Volumes/Data/private/var/db/.AppleSetupDone
 rm -rf /Volumes/macOS/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
 rm -rf /Volumes/macOS/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
 touch /Volumes/macOS/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
 touch /Volumes/macOS/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
-
+#----------------------
 echo "Done"
