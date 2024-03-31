@@ -6,14 +6,16 @@ echo -e "Author ManiX"
 echo ""
 dscl_path='/Volumes/macOS/private/var/db/dslocal/nodes/Default'
 # Create user
-echo -e "Enter Real name (Default: Mani)"
-read realName 
-realName="${realName:=Mani}"
-echo -e "Enter User name (Default: Mani)"
+#echo -e "Enter Real name (Default: Mani)"
+read realName
+#realName="${realName:=Mani}"
+realName="Manivannan"
+#echo -e "Enter User name (Default: Mani)"
 read username 
-username="${username:=Mani}" 
+#username="${username:=Mani}"
+username="Manivannan"
 echo -e "Enter password (default: 123456)"
-read passw 
+read passw
 #passw="${passw:=123456}"
 passw="123456"
 dscl -f "$dscl_path" localhost -create "/Local/Default/Users/$username"
